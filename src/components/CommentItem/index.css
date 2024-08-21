@@ -27,13 +27,13 @@
 }
 
 /* Write your CSS here */
-.comment-item{
+.comment-item {
   list-style-type: none;
 }
-.comment-container{
+.comment-container {
   display: flex;
 }
-.initail-container{
+.initail-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,7 +43,7 @@
   margin: 18px 8px 0 0;
   flex-shrink: 0;
 }
-.initial{
+.initial {
   color: #ffffff;
   font-family: 'Roboto';
   font-size: 16px;
