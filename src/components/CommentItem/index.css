@@ -27,3 +27,25 @@
 }
 
 /* Write your CSS here */
+.comment-item{
+  list-style-type: none;
+}
+.comment-container{
+  display: flex;
+}
+.initail-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  margin: 18px 8px 0 0;
+  flex-shrink: 0;
+}
+.initial{
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 16px;
+  margin: 0;
+}
