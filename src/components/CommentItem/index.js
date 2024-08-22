@@ -1,61 +1,50 @@
-// Write your code here
-
 import {formatDistanceToNow} from 'date-fns'
 
-const CommentItem = props => {
-  const {commentsDetails, toggleIsLike, commentDelete} = props
-  const {name, id, comment, isLiked, initialContainer, date} = commentsDetails
-  const initial = name ? name[0].topUpperCase : ''
-  const postedTime = formatDistanceToNow(date)
-  const liketextClassName = isLiked ? 'active button' : 'button'
-  const imageUrl = isLiked
-    ? 'https://assets.ccbp.in/frontend/react-js/comments-app/like-img.png'
-    : 'https://assets.ccbp.in/frontend/react-js/comments-app/liked-img.png'
+import './index.css'
+// Write your code here
 
-  const onClickDelete = () => {
-    commentDelete(id)
-  }
-  const onClickToggle = () => {
-    toggleIsLike(id)
-  }
+const CommentItem = props => {
+  const {commentDetails} = props
+  const {name, comment, isLiked, initialContainer, date} = commentDetails
+  const initialContainerClassName = `initail-container ${initialContainer}`
+  const initial = name[0].toUpperCase()
+  const active = isLiked ? 'active btn' : 'btn'
+  const postedTime = formatDistanceToNow(date)
 
   return (
     <li className="comment-item">
-      <div className="comment-container">
-        <div className={initialContainer}>
+      <div className="comments-container">
+        <div className={initialContainerClassName}>
           <p className="initial">{initial}</p>
         </div>
-        <div className="name-time-container">
-          <p className="name">{name}</p>
-          <p className="time">{postedTime}</p>
+        <div>
+          <div className="name-time-container">
+            <p className="name">{name}</p>
+            <p className="time">{postedTime}</p>
+          </div>
+          <p className="comment">{comment}</p>
         </div>
-        <p className="comment-text">{comment}</p>
       </div>
-      <div className="button-container">
-        <div className="like-button-container">
-          <img src={imageUrl} alt="like" className="like-icon" />
-          <button
-            className={liketextClassName}
-            onClick={onClickToggle}
-            type="button"
-          >
+      <div className="buttons-container">
+        <div className="like-container">
+          <img
+            src="https://assets.ccbp.in/frontend/react-js/comments-app/like-img.png"
+            alt="like"
+            className="like-image"
+          />
+          <button className={active} type="button">
             Like
           </button>
         </div>
-        <button
-          className="delete-button"
-          onClick={onClickDelete}
-          type="button"
-          data-testid="delete"
-        >
+        <button className="btn" type="button">
           <img
             src="https://assets.ccbp.in/frontend/react-js/comments-app/delete-img.png"
             alt="delete"
-            className="delete-icon"
+            className="delete"
           />
         </button>
       </div>
-      <hr className="line" />
+      <hr className="comment-line" />
     </li>
   )
 }

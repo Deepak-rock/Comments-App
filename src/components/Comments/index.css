@@ -1,1 +1,129 @@
 /* Write your CSS here */
+.app-container {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  margin-top: 48px;
+}
+.input-comments-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+.line {
+  width: 100%;
+  border: 1px solid #dee0e3;
+  margin: 16px 0;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.heading {
+  font-size: 40px;
+  font-weight: 800;
+  font-family: 'Roboto';
+  color: #1e293b;
+  margin: 12px 0;
+}
+.para-text {
+  font-size: 18px;
+  font-weight: 600;
+  color: #475569;
+  font-family: 'Roboto';
+  margin-top: 24px;
+}
+.from {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  order: 1;
+}
+.name-input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px 15px;
+  border: 1px solid #cbd2d9;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #1e293b;
+  font-family: 'Roboto';
+  outline: none;
+}
+.comment-input {
+  width: 100%;
+  padding: 8px 15px;
+  margin: 0 0 10px 0;
+  border: 1px solid #cbd2d9;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #1e293b;
+  font-family: 'Roboto';
+  outline: none;
+}
+.add-btn-container {
+  margin: 2px 0 20px 0;
+}
+.add-button {
+  background-color: #0284c7;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 16px;
+  color: #ffffff;
+  font-family: 'Roboto';
+  cursor: pointer;
+}
+.image {
+  width: 100%;
+}
+.count-comment {
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 20px;
+}
+.count {
+  background-color: #0284c7;
+  border-radius: 3px;
+  padding: 4px 8px;
+  color: #ffffff;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+.comment-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .app-container {
+    margin: 96px;
+  }
+  .input-comments-container {
+    width: 80%;
+    max-width: 1140px;
+  }
+  .input-container {
+    flex-direction: row;
+  }
+  .heading {
+    font-size: 50px;
+    margin-top: 0;
+    margin-bottom: 24px;
+  }
+  .from {
+    width: 30%;
+    min-width: 300px;
+    order: 0;
+  }
+  .image {
+    width: 380px;
+    height: 300px;
+  }
+}
